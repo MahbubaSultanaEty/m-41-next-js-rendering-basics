@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+/*📘 Server-Side Rendering (SSR)
+ Definition:
+ Server এ HTML generate হয়ে browser এ পাঠানো হয়
 
-## Getting Started
+ How it works:
+User request পাঠায়
+Server data fetch করে
+HTML তৈরি করে
+Browser এ পাঠায়
 
-First, run the development server:
+✅ Features:
+SEO friendly 
+First load fast (content ready থাকে) 
+Slow device এও ভালো কাজ করে 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ Limitations:
+প্রতি request এ server load বাড়ে 
+একটু slow হতে পারে (data fetch time) 
+*/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+📗 Client-Side Rendering (CSR)
+ Definition:
+ Browser প্রথমে empty page পায়, তারপর JS দিয়ে UI render হয়
 
-To learn more about Next.js, take a look at the following resources:
+How it works:
+Browser HTML + JS পায়
+JS run হয়
+Data fetch করে
+UI render হয়
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ Features:
+Smooth interaction 
+Fast navigation (reload লাগে না) 
+Dynamic UI 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ Limitations:
+First load slow 
+SEO weak  (initially content থাকে না)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📌 SSR Component (Server-side rendered component)
+ সংজ্ঞা:
+যে component server এ render হয়, user এর browser এ ready HTML পাঠায়।
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ বুঝার উপায়:
+user কিছু করার আগেই UI ready
+event handler (onClick) থাকে না
+✅ Example (Link use করলে):
+
+
+📌 CSR Component (Client-side rendered component)
+ সংজ্ঞা:
+
+যে component browser এ render হয় এবং user interaction অনুযায়ী UI change করে।
+
+ বুঝার উপায়:
+onClick, useState, useEffect থাকে
+user action এর উপর depend করে

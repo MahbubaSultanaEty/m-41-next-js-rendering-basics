@@ -6,7 +6,7 @@ const Counter = () => {
     const [count, setCount] = useState(0);
 
 
-    console.log("counter component");
+    console.log("client side counter component", count);
     return (
         <div>
             <h3 className="text-xl font-bold">Counter: { count}</h3>
