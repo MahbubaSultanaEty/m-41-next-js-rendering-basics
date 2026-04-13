@@ -59,3 +59,7 @@ event handler (onClick) থাকে না
  বুঝার উপায়:
 onClick, useState, useEffect থাকে
 user action এর উপর depend করে
+
+
+## data API
+food api: [https://phi-lab-server.vercel.app/api/v1/lab/foods](https://phi-lab-server.vercel.app/api/v1/lab/foods)
