@@ -1,5 +1,6 @@
 import Posts from "@/Component/Posts";
 import { Suspense } from "react";
+import ErrorForPosts from "./Error";
 
 
 const PostPage = () => {
@@ -12,7 +13,9 @@ const PostPage = () => {
             <Posts postsPromise={postsPromise}></Posts>
             </Suspense>
 
-            
+            <div>
+                <ErrorForPosts></ErrorForPosts>
+            </div>
         </div>
     );
 };

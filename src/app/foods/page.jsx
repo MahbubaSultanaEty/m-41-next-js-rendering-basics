@@ -1,6 +1,7 @@
 import FoodCard from "@/Component/FoodCard";
 
 
+
 const FoodPage = async () => {
     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/foods");
 
@@ -15,7 +16,9 @@ const FoodPage = async () => {
             {
                 foods.map(food=> <FoodCard food={food} key={food.id}></FoodCard> )
                 }
-                </div>
+            </div>
+            
+          
         </div>
     );
 };

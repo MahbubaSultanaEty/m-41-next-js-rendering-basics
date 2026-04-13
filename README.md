@@ -62,4 +62,9 @@ user action এর উপর depend করে
 
 
 ## data API
-food api: [https://phi-lab-server.vercel.app/api/v1/lab/foods](https://phi-lab-server.vercel.app/api/v1/lab/foods)
+foods api: [https://phi-lab-server.vercel.app/api/v1/lab/foods](https://phi-lab-server.vercel.app/api/v1/lab/foods)
+
+Get a food by its id
+```
+https://phi-lab-server.vercel.app/api/v1/lab/foods/${id}
+```
